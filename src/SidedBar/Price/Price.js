@@ -4,7 +4,15 @@ import "./Price.css"
 
 const Price = () => {
   return (
-    <h1>Price</h1>
+    <div className='ml'>
+      <h2 className='sidebar-title price-title'>Price</h2>
+
+      <label  className="sidebar-label-container">
+          <input type="radio" name='test' />
+          <span className="checkmark"></span>All
+      </label>
+
+    </div>
   )
 }
 

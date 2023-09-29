@@ -3,10 +3,10 @@ import "./Category.css"
 
 const Category = () => {
   return (
-    <div className='sidebar-title'>
-      <h2>Category</h2>
+    <div>
+      <h2 className='sidebar-title'>Category</h2>
 
-      <div>
+      <div className='sidebar-items'>
 
         <label  className="sidebar-label-container">
           <input type="radio" name='test' />
@@ -20,7 +20,7 @@ const Category = () => {
 
         <label  className="sidebar-label-container">
           <input type="radio" name='test' />
-          <span className="checkmark"></span>Sandals
+          <span className="checkmark"></span>Flats
         </label>
 
         <label  className="sidebar-label-container">

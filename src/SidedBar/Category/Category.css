@@ -52,7 +52,7 @@ border-radius: 50%;
 
 
 .sidebar-label-container input:checked ~ .checkmark{
-    background-color: rgb(27, 0, 123);
+    background-color: rgb(50, 15, 177);
 }
 
 
@@ -75,7 +75,7 @@ border-radius: 50%;
     width: 7px;
     height: 7px;
     border-radius: 50%;
-    background: #c006a7;
+    background: #ffffff;
 }
 
 

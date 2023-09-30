@@ -5,7 +5,9 @@ import Price from "./Price/Price"
 import "./Sidebar.css"
 
 
-const Sidebar = () => {
+const Sidebar = ({handleChange}) => {
+
+
   return (
     <div>
       <section className="side-bar">
@@ -13,9 +15,9 @@ const Sidebar = () => {
           <h1>LOGO</h1>
         </div>
 
-        <Category />
-        <Colors />
-        <Price />
+        <Category handleChange ={handleChange} />
+        <Colors handleChange ={handleChange} />
+        <Price handleChange ={handleChange} />
       </section>
     </div>
   )

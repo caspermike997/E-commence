@@ -1,12 +1,13 @@
-  
+
 .sidebar-title{
-    font-size: 22px;
-    margin-bottom: 20px;
+    font-size: 15px;
+    margin-bottom: 10px;
     font-weight: normal;
 }
 
+
 .sidebar-items{
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 
@@ -28,6 +29,7 @@
     opacity: 0;
     cursor: pointer;
 }
+
 
 
 .checkmark{
@@ -73,7 +75,7 @@ border-radius: 50%;
     width: 7px;
     height: 7px;
     border-radius: 50%;
-    background: #fffdfd;
+    background: #c006a7;
 }
 
 

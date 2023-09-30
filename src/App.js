@@ -77,9 +77,9 @@ function App() {
     <div className='App'>
 
     <Sidebar  handleChange ={handleChange}/> 
-    <Nav />
-    <Recommended />
-    <Products />
+    <Nav query={query} handleChange ={handleChange}/>
+    <Recommended handleChange ={handleClick}/>
+    <Products results={results} />
     
     </div>
   );

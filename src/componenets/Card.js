@@ -1,5 +1,5 @@
 import React from 'react'
-import {AiFillStar} from "react-icons/ai"
+
 import {BsFillBagCheckFill} from "react-icons/bs"
 
 const Card = ({img, title, star, reviews, newPrice, prevPrice }) => {
@@ -14,7 +14,7 @@ const Card = ({img, title, star, reviews, newPrice, prevPrice }) => {
           <h3 className='card-title'>{title}</h3>
         </div>
         <section className="card-reviews">
-          {star} 
+          {star} {star} {star} {star}
           <span className="total-reviews">{reviews}</span>
         </section>
 

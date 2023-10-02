@@ -10,8 +10,8 @@ const Colors = ({handleChange}) => {
         <label className="sidebar-label-container">
         <input type="radio" onChange={handleChange} value="" name='test2' />
         <span className="checkmark"></span> All
-      </label>
 
+      </label>
 
       <Input  
       handleChange={handleChange}
@@ -29,7 +29,7 @@ const Colors = ({handleChange}) => {
       color="blue"
       />
 
-<Input  
+    <Input  
       handleChange={handleChange}
       value="red"
       name="test1"
@@ -37,7 +37,7 @@ const Colors = ({handleChange}) => {
       color="red"
       />
 
-<Input  
+    <Input  
       handleChange={handleChange}
       value="green"
       name="test1"

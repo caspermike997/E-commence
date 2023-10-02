@@ -5,57 +5,60 @@ import Recommended from "./Recommended/Recommended"
 import Sidebar from "./SidedBar/Sidebar";
 
 
-import datas from "./db/db"
+import products from "./db/db"
 import Card from "./componenets/Card";
 
 function App() {
 
-  // UseStates
+  //----------------- UseStates------------------
  const  [selectedCategory, setSelectedCategory] = useState(null);
  const  [query, setQuery] = useState("");
 
 
- //input Filter
-  const handleInpuChange = (event)=> {
+ //--------------input Filter----------------
+  const handleInputChange = (event)=> {
       setQuery (event.target.value)
   }
 
-  const filteredItems = datas.filter(data => data.title.
-    toLocaleLowerCase().indexOf(query.toLowerCase() !==-1)
+  const filteredItems = products.filter( product => product.title.
+toLocaleLowerCase().indexOf(query.toLowerCase() !== -1)
   );
 
-  //-----------------radio Filters--------
-
+  //-----------------radio Filters---------------
   const handleChange = (event) => {
     setSelectedCategory (event.target.value)
+    // console.log(event.target.value)
   }
 
   // ----------------Buttons Filter-----------------
-
   const handleClick =(event) => {
-    selectedCategory(event.target.value)
+    setSelectedCategory (event.target.value)
   }
 
 
-  const filteredData =(datas, selected, query) => {
-    let filteredProduct = datas
+  const filteredData =(products, selected, query) => {
+    let filteredProducts = products
 
   
     //--------------Filtering input items------------
-
     if(query) {
-      filteredProduct = filteredItems
+      filteredProducts = filteredItems
     }
 
 
   //------------------Selected filter items -------------------
     if (selected) {
-      filteredProduct = filteredProduct.filter(({category, color, company, newPrice, title}) =>  
-      category===selected|| color===selected || company===selected || newPrice===selected || title===selected)
+      filteredProducts = filteredProducts.filter(({category, color, company, newPrice, title}) =>  
+      category === selected|| 
+      color === selected || 
+      company === selected || 
+      newPrice === selected || 
+      title === selected
+      );
   }
 
 
-  return filteredProduct.map(({img, title, star, reviews, newPrice, prevPrice }) => (
+  return filteredProducts.map(({img, title, star, reviews, newPrice, prevPrice }) => (
     <Card 
     key={Math.random()} 
     img = {img}
@@ -66,20 +69,19 @@ function App() {
     prevPrice = {prevPrice}
     
     />
-  ))
+  ));
 
   }
 
 
-  const results = filteredData(datas, selectedCategory, query, )
-
+  const result = filteredData(products, selectedCategory, query )
   return (
     <div className='App'>
 
     <Sidebar  handleChange ={handleChange}/> 
     <Nav query={query} handleChange ={handleChange}/>
     <Recommended handleChange ={handleClick}/>
-    <Products results={results} />
+    <Products results={result} />
     
     </div>
   );

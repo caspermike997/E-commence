@@ -4,7 +4,7 @@ import Input from '../../componenets/Input'
 
 const Category = ({handleChange}) => {
   return (
-    <div className='l'>
+    <div>
       <h2 className='sidebar-title '>Category</h2>
 
       <div >
@@ -20,15 +20,13 @@ const Category = ({handleChange}) => {
       title="Sneakers"
       />
 
-      
       <Input  
       handleChange = {handleChange} 
       value= "flats"
       name="test"
       title="Flats"
       />
-
-      
+ 
       <Input  
       handleChange = {handleChange} 
       value= "sandals"
@@ -36,14 +34,12 @@ const Category = ({handleChange}) => {
       title="Sandals"
       />
 
-      
       <Input  
       handleChange = {handleChange} 
       value= "heels"
       name="test"
       title="Heels"
       />
-
 
       </div>
     </div>

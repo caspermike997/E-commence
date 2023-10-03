@@ -4,7 +4,7 @@ import {FiHeart} from "react-icons/fi"
 import {AiOutlineShoppingCart, AiOutlineUserAdd} from "react-icons/ai"
 
 
-const Nav = () => {
+const Nav = ({handleInputChange}) => {
   return (
     <nav>
 
@@ -14,6 +14,7 @@ const Nav = () => {
         type="text" 
         className='search-input'
         placeholder='Enter your search shoe.'
+        onChange={handleInputChange}
         />
 
       </div>
@@ -26,6 +27,9 @@ const Nav = () => {
         <a href="#">
         <AiOutlineShoppingCart className='nav-icons' />
         </a>
+
+        
+
 
         <a href="#">
         <AiOutlineUserAdd className='nav-icons' />

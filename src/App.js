@@ -80,7 +80,7 @@ toLocaleLowerCase().indexOf(query.toLowerCase() !== -1)
 
     <Sidebar  handleChange ={handleChange}/> 
     <Nav query={query} handleChange ={handleChange}/>
-    <Recommended handleChange ={handleClick}/>
+    <Recommended handleClick ={handleClick}/>
     <Products results={result} />
     
     </div>
